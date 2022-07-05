@@ -118,7 +118,7 @@ class WeatherFragment : Fragment() {
         }
         if (mResultList != null) {
             Log.d("CheckCurrentLocation", mResultList[0].getAddressLine(0))
-            if (mResultList[0].locality.isEmpty()) {
+            if (mResultList[0].locality.isNullOrEmpty()) {
                 binding.currentLocation.text = mResultList[0].adminArea
             } else {
                 binding.currentLocation.text = mResultList[0].locality
@@ -143,7 +143,7 @@ class WeatherFragment : Fragment() {
             }
             if (mResultList != null) {
                 Log.d("CheckCurrentLocation", mResultList[0].getAddressLine(0))
-                if (mResultList[0].locality.isEmpty()) {
+                if (mResultList[0].locality.isNullOrEmpty()) {
                     binding.currentLocation.text = mResultList[0].adminArea
                 } else {
                     binding.currentLocation.text = mResultList[0].locality
